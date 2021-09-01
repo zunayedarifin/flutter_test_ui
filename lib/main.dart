@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'button_widget.dart';
 import 'navigation_drawer_widget.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -48,7 +49,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -58,14 +58,25 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      drawer: NavigationDrawerWidget(),
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-    );
+        drawer: NavigationDrawerWidget(),
+        appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+        ),
+        body: Builder(
+          builder: (context) => Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.symmetric(horizontal: 32),
+            child: ButtonWidget(
+              icon: Icons.open_in_new,
+              text: 'Open Drawer',
+              onClicked: () {
+                Scaffold.of(context).openDrawer();
+                // Scaffold.of(context).openEndDrawer();
+              },
+            ),
+          ),
+        ));
   }
 }
-
-
