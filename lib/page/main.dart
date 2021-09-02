@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'button_widget.dart';
-import 'navigation_drawer_widget.dart';
+import '../widget/button_widget.dart';
+import '../widget/navigation_drawer_widget.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Pulse'),
     );
   }
 }
@@ -62,20 +62,25 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
+          //https://pulseservicesbd.com/upload/ad_image/banner.jpeg
           title: Text(widget.title),
         ),
         body: Builder(
           builder: (context) => Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.symmetric(horizontal: 32),
-            child: ButtonWidget(
-              icon: Icons.open_in_new,
-              text: 'Open Drawer',
-              onClicked: () {
-                Scaffold.of(context).openDrawer();
-                // Scaffold.of(context).openEndDrawer();
-              },
+            alignment: Alignment.topCenter,
+            padding: EdgeInsets.symmetric(horizontal: 12,vertical: 12),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
+              child: Image.network("https://pulseservicesbd.com/upload/ad_image/banner.jpeg"),
             ),
+            // child: ButtonWidget(
+            //   icon: Icons.open_in_new,
+            //   text: 'Open Drawer',
+            //   onClicked: () {
+            //     Scaffold.of(context).openDrawer();
+            //     // Scaffold.of(context).openEndDrawer();
+            //   },
+            // ),
           ),
         ));
   }

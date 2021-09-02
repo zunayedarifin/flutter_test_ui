@@ -1,26 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_test_ui/favorite_page.dart';
-import 'package:flutter_test_ui/notification_page.dart';
-import 'package:flutter_test_ui/people_page.dart';
-import 'package:flutter_test_ui/plugin_page.dart';
-import 'package:flutter_test_ui/updates_page.dart';
-import 'package:flutter_test_ui/user_page.dart';
-import 'package:flutter_test_ui/workflow_page.dart';
+import 'package:flutter_test_ui/page/favorite_page.dart';
+import 'package:flutter_test_ui/page/notification_page.dart';
+import 'package:flutter_test_ui/page/people_page.dart';
+import 'package:flutter_test_ui/page/plugin_page.dart';
+import 'package:flutter_test_ui/page/updates_page.dart';
+import 'package:flutter_test_ui/page/user_page.dart';
+import 'package:flutter_test_ui/widget/workflow_page.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
 
   @override
   Widget build(BuildContext context) {
-    final name = 'Sarah Abs';
-    final email = 'sarah@abs.com';
+    final name = 'Zunayed Arifin';
+    final email = 'zunayed@pulseservicesbd.com';
     final urlImage =
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80';
+        'https://scontent.fdac14-1.fna.fbcdn.net/v/t1.6435-9/102559949_3182770548479087_1873386275938728818_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeE9wtfagjLFj0eRfIGeCbZsKu6mB7eHvf4q7qYHt4e9_rR4R7VqcmK0NFbdwpWQQffagyiM9-0GhNHBX8BGeZc8&_nc_ohc=pahkzq5PK4YAX_g2Jg7&_nc_ht=scontent.fdac14-1.fna&oh=ee0b3304bb3dc19cfddd316999b181e4&oe=6156A5AA';
 
     return Drawer(
       child: Material(
-        color: Color.fromRGBO(50, 75, 205, 1),
+        color: Colors.green,
         child: ListView(
           children: <Widget>[
             buildHeader(
@@ -95,32 +95,45 @@ class NavigationDrawerWidget extends StatelessWidget {
   }) =>
       InkWell(
         onTap: onClicked,
-        child: Container(
-          padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
-          child: Row(
+        child: Padding(
+          padding: const EdgeInsets.all(28.0),
+          child: Column(
             children: [
-              CircleAvatar(radius: 30, backgroundImage: NetworkImage(urlImage)),
-              SizedBox(width: 20),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    name,
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    email,
-                    style: TextStyle(fontSize: 14, color: Colors.white),
+                  CircleAvatar(
+                      radius: 50, backgroundImage: NetworkImage(urlImage)),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          name,
+                          style: TextStyle(fontSize: 20, color: Colors.white,),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          email,
+                          style: TextStyle(fontSize: 14, color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
-              Spacer(),
-              CircleAvatar(
-                radius: 24,
-                backgroundColor: Color.fromRGBO(30, 60, 168, 1),
-                child: Icon(Icons.add_comment_outlined, color: Colors.white),
-              )
+              // CircleAvatar(
+              //   radius: 24,
+              //   backgroundColor: Color.fromRGBO(30, 60, 168, 1),
+              //   child: Icon(Icons.add_comment_outlined, color: Colors.white),
+              // )
             ],
           ),
         ),
