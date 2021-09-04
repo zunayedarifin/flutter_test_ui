@@ -29,7 +29,7 @@ class NavigationDrawerWidget extends StatelessWidget {
               email: email,
               onClicked: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => UserPage(
-                  name: 'Sarah Abs',
+                  name: 'Zunayed Arifin',
                   urlImage: urlImage,
                 ),
               )),
@@ -115,7 +115,10 @@ class NavigationDrawerWidget extends StatelessWidget {
                       children: [
                         Text(
                           name,
-                          style: TextStyle(fontSize: 20, color: Colors.white,),
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 4),
@@ -181,6 +184,36 @@ class NavigationDrawerWidget extends StatelessWidget {
       ),
       hoverColor: hoverColor,
       onTap: onClicked,
+    );
+  }
+
+  Widget buildMenuItemVertical({
+    required String text,
+    required String icon,
+    VoidCallback? onClicked,
+  }) {
+    final color = Colors.white;
+    final hoverColor = Colors.white70;
+    return Center(
+        child: Material(
+          child: InkWell(
+            splashColor: Colors.green, // splash color
+            onTap: () {}, // button pressed
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(0,8,0,0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  IconButton(
+                    icon: Image.asset(icon),
+                    onPressed: () {  },
+                  ), // icon
+                  Text(text,style: TextStyle(fontSize: 16),), // text
+                ],
+              ),
+            ),
+          ),
+        ),
     );
   }
 
