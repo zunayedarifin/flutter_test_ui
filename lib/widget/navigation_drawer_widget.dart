@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test_ui/page/favorite_page.dart';
 import 'package:flutter_test_ui/page/notification_page.dart';
 import 'package:flutter_test_ui/page/people_page.dart';
@@ -204,11 +205,8 @@ class NavigationDrawerWidget extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  IconButton(
-                    icon: Image.asset(icon),
-                    onPressed: () {  },
-                  ), // icon
-                  Text(text,style: TextStyle(fontSize: 16),), // text
+                  SvgPicture.asset(icon,height: 70,), // icon
+                  Text(text,style: TextStyle(fontSize: 16),textAlign: TextAlign.center,), // text
                 ],
               ),
             ),

@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 0, 4.0, 0),
+                              padding: const EdgeInsets.fromLTRB(0, 0, 8.0, 0),
                               child: Container(
                                 width: 120,
                                 height: 120,
@@ -114,37 +114,44 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(4.0, 0, 4.0, 0),
+                              padding: const EdgeInsets.fromLTRB(0, 0, 8.0, 0),
                               child: Container(
                                 width: 120,
                                 height: 120,
+                                child: Column(
+                                  children: [
+                                    NavigationDrawerWidget().buildMenuItemVertical(
+                                      text: 'specialised doctor',
+                                      icon: 'assets/ic_doctor.svg',
+                                      //onClicked: () => selectedItem(context, 0),
+                                    )
+                                  ],
+                                ),
                                 decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(
-                                          'https://pulseservicesbd.com/upload/ad_image/banner.jpeg')),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(8.0)),
-                                  color: Colors.redAccent,
+                                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.fromLTRB(4.0, 0, 0, 0),
+                              padding: const EdgeInsets.fromLTRB(0, 0, 8.0, 0),
                               child: Container(
                                 width: 120,
                                 height: 120,
+                                child: Column(
+                                  children: [
+                                    NavigationDrawerWidget().buildMenuItemVertical(
+                                      text: 'doctor call',
+                                      icon: 'assets/ic_doctor.svg',
+                                      //onClicked: () => selectedItem(context, 0),
+                                    )
+                                  ],
+                                ),
                                 decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(
-                                          'https://pulseservicesbd.com/upload/ad_image/banner.jpeg')),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(8.0)),
-                                  color: Colors.redAccent,
+                                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
@@ -174,55 +181,66 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 0, 4.0, 0),
+                              padding: const EdgeInsets.fromLTRB(0, 0, 8.0, 0),
                               child: Container(
                                 width: 120,
                                 height: 120,
+                                child: Column(
+                                  children: [
+                                    NavigationDrawerWidget().buildMenuItemVertical(
+                                      text: 'online pharmacy',
+                                      icon: 'assets/ic_doctor.svg',
+                                      //onClicked: () => selectedItem(context, 0),
+                                    )
+                                  ],
+                                ),
                                 decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(
-                                          'https://pulseservicesbd.com/upload/ad_image/banner.jpeg')),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(8.0)),
-                                  color: Colors.redAccent,
+                                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
                           ),
                           Expanded(
                             child: Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(4.0, 0, 4.0, 0),
+                              padding: const EdgeInsets.fromLTRB(0, 0, 8.0, 0),
                               child: Container(
                                 width: 120,
                                 height: 120,
+                                child: Column(
+                                  children: [
+                                    NavigationDrawerWidget().buildMenuItemVertical(
+                                      text: 'lab test',
+                                      icon: 'assets/ic_doctor.svg',
+                                      //onClicked: () => selectedItem(context, 0),
+                                    )
+                                  ],
+                                ),
                                 decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(
-                                          'https://pulseservicesbd.com/upload/ad_image/banner.jpeg')),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(8.0)),
-                                  color: Colors.redAccent,
+                                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.fromLTRB(4.0, 0, 0, 0),
+                              padding: const EdgeInsets.fromLTRB(0, 0, 8.0, 0),
                               child: Container(
                                 width: 120,
                                 height: 120,
+                                child: Column(
+                                  children: [
+                                    NavigationDrawerWidget().buildMenuItemVertical(
+                                      text: 'corona',
+                                      icon: 'assets/ic_doctor.svg',
+                                      //onClicked: () => selectedItem(context, 0),
+                                    )
+                                  ],
+                                ),
                                 decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(
-                                          'https://pulseservicesbd.com/upload/ad_image/banner.jpeg')),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(8.0)),
-                                  color: Colors.redAccent,
+                                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
